@@ -27,7 +27,7 @@ process.stdin
 function transform (inputs) {
   const { titleCase } = require('title-case')
   for (const input of inputs) {
-    process.stdout.write(titleCase(input) + '\n')
+    process.stdout.write(titleCase(input.replace(/^the/, 'The')) + '\n')
   }
   process.exit(0)
 }
